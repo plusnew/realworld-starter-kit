@@ -1,0 +1,54 @@
+{
+  "name": "realworld-starter-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "webpack-dev-server --config config/webpack/dev.conf.js",
+    "build": "webpack --config config/webpack/prod.conf.js",
+    "test": "karma start config/karma/base.conf.js",
+    "test:karma:watch": "karma start config/karma/base.conf.js --auto-watch --no-single-run",
+    "test:jest": "jest --config=config/jest/base.conf.js",
+    "test:jest:watch": "jest --config=config/jest/base.conf.js --watch"
+  },
+  "keywords": [
+    "plusnew"
+  ],
+  "author": "",
+  "dependencies": {
+    "plusnew": "^0.6.50"
+  },
+  "devDependencies": {
+    "@plusnew/simulate-dom-events": "^0.1.5",
+    "@types/enzyme": "^3.10.3",
+    "@types/jasmine": "^3.3.16",
+    "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-plusnew": "^0.6.45",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "jasmine-core": "^3.4.0",
+    "jest": "^24.8.0",
+    "karma": "^4.2.0",
+    "karma-chrome-launcher": "^3.0.0",
+    "karma-coverage-istanbul-reporter": "^2.1.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^4.0.2",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.5.3",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
