@@ -23,31 +23,25 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true,
-              localIdentName: '[local]--[hash:base64:5]',
-              camelCase: true,
             }
           },
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              sourceMapContents: false,
-              modules: true,
-              localIdentName: '[local]--[hash:base64:5]',
             },
           },
         ],
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|woff2?|ttf)$/,
         use: [
           {
             loader: 'file-loader',
@@ -79,7 +73,7 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: [path.join(__dirname, '..', '..', 'dist')],
     }),
     new HtmlWebpackPlugin({
-      title: 'plusnew app',
+      template: path.join(__dirname, '..', '..', 'public', 'index.html'),
       inject: 'head',
     }),
     new ScriptExtHtmlWebpackPlugin({
