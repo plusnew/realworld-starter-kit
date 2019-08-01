@@ -1,4 +1,4 @@
-# ![RealWorld Example App](logo.png)
+# ![RealWorld Example App](logo.png)[![Coverage Status](https://coveralls.io/repos/github/plusnew/realworld-starter-kit/badge.svg?branch=master)](https://coveralls.io/github/plusnew/realworld-starter-kit?branch=master)
 
 > ### [plusnew](https://github.com/plusnew/plusnew) codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
