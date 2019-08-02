@@ -1,5 +1,5 @@
 import { configure } from 'enzyme';
-import enzymeAdapterPlusnew, { shallow } from 'enzyme-adapter-plusnew';
+import enzymeAdapterPlusnew, { shallow } from '@plusnew/enzyme-adapter';
 import plusnew from 'plusnew';
 import App from '.';
 import Content from './components/Content';

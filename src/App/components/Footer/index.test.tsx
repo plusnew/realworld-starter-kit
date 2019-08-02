@@ -1,5 +1,5 @@
 import { configure } from 'enzyme';
-import enzymeAdapterPlusnew, { mount } from 'enzyme-adapter-plusnew';
+import enzymeAdapterPlusnew, { mount } from '@plusnew/enzyme-adapter';
 import plusnew from 'plusnew';
 import Footer from '.';
 
