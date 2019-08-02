@@ -10,5 +10,7 @@ describe('<Header />', () => {
     const wrapper = mount(<Header />);
 
     expect(wrapper.find('nav').exists()).toBe(true);
+
+    wrapper.unmount();
   });
 });

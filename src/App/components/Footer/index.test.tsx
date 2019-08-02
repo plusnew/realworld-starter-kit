@@ -10,5 +10,7 @@ describe('<Footer />', () => {
     const wrapper = mount(<Footer />);
 
     expect(wrapper.find('footer').exists()).toBe(true);
+
+    wrapper.unmount();
   });
 });

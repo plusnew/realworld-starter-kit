@@ -13,17 +13,23 @@ describe('<App />', () => {
     const wrapper = shallow(<App />);
 
     expect(wrapper.containsMatchingElement(<Header />)).toBe(true);
+
+    wrapper.unmount();
   });
 
   it('should contain <Content /', () => {
     const wrapper = shallow(<App />);
 
     expect(wrapper.containsMatchingElement(<Content />)).toBe(true);
+
+    wrapper.unmount();
   });
 
   it('should contain <Footer /', () => {
     const wrapper = shallow(<App />);
 
     expect(wrapper.containsMatchingElement(<Footer />)).toBe(true);
+
+    wrapper.unmount();
   });
 });

@@ -18,5 +18,7 @@ describe('<Content />', () => {
     );
 
     expect(wrapper.containsMatchingElement(<HomePage.Component />)).toBe(true);
+
+    wrapper.unmount();
   });
 });
