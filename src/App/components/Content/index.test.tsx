@@ -30,6 +30,8 @@ describe('<Content />', () => {
     );
 
     expect(wrapper.contains(<div>This route does not exist</div>)).toBe(true);
+
+    wrapper.unmount();
   });
 
   it('should containt error when route is weird', () => {
@@ -40,5 +42,7 @@ describe('<Content />', () => {
     );
 
     expect(wrapper.contains(<div>This route has invalid parameters</div>)).toBe(true);
+
+    wrapper.unmount();
   });
 });
