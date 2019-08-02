@@ -21,4 +21,24 @@ describe('<Content />', () => {
 
     wrapper.unmount();
   });
+
+  it('should containt error when route is not defined', () => {
+    const wrapper = mount(
+      <StaticProvider url="invalidRoute" onchange={() => null}>
+        <Content />
+      </StaticProvider>,
+    );
+
+    expect(wrapper.contains(<div>This route does not exist</div>)).toBe(true);
+  });
+
+  it('should containt error when route is weird', () => {
+    const wrapper = mount(
+      <StaticProvider url="?invalid=parameter" onchange={() => null}>
+        <Content />
+      </StaticProvider>,
+    );
+
+    expect(wrapper.contains(<div>This route has invalid parameters</div>)).toBe(true);
+  });
 });
