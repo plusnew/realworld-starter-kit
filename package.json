@@ -16,6 +16,7 @@
   ],
   "author": "",
   "dependencies": {
+    "@plusnew/router": "^0.6.43",
     "plusnew": "^0.6.50"
   },
   "devDependencies": {
