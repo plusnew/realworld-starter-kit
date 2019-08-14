@@ -22,8 +22,8 @@ config.module.rules.push({
 
 config.optimization = {};
 
-config.externals = [
-  //...config.externals,
-  'plusnew',
-]
+config.externals = {
+  '@plusnew/core': 'plusnew',
+};
+
 module.exports = config;
