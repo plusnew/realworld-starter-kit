@@ -1,4 +1,4 @@
-import plusnew, { component } from 'plusnew';
+import plusnew, { component } from '@plusnew/core';
 import Homepage from './components/Homepage';
 import { NotFound, Invalid } from '@plusnew/router';
 import NotFoundContent from './components/NotFoundContent';

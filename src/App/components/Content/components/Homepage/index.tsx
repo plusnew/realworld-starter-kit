@@ -1,5 +1,5 @@
 import { createRoute } from '@plusnew/router';
-import plusnew, { component, Props, Async } from 'plusnew';
+import plusnew, { component, Props, Async } from '@plusnew/core';
 import Loader from 'shared/components/Loader';
 
 type props = {
@@ -21,7 +21,7 @@ const Component =  component(
 );
 
 export default createRoute(
-  [''],
+  '',
   {},
   Component,
 );

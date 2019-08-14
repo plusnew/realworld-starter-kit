@@ -1,6 +1,6 @@
 import { configure } from 'enzyme';
 import enzymeAdapterPlusnew, { mount } from '@plusnew/enzyme-adapter';
-import plusnew from 'plusnew';
+import plusnew from '@plusnew/core';
 import Providers from '.';
 import { BrowserProvider } from '@plusnew/router';
 

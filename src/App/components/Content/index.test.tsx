@@ -1,7 +1,7 @@
 import { StaticProvider } from '@plusnew/router';
 import { configure } from 'enzyme';
 import enzymeAdapterPlusnew, { mount } from '@plusnew/enzyme-adapter';
-import plusnew from 'plusnew';
+import plusnew from '@plusnew/core';
 import Content from '.';
 import HomePage from './components/Homepage';
 // import Article from './components/Article';

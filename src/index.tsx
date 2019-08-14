@@ -1,4 +1,4 @@
-import plusnew from 'plusnew';
+import plusnew from '@plusnew/core';
 import App from './App';
 import Providers from 'Providers';
 

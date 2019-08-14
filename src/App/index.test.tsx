@@ -1,6 +1,6 @@
 import { configure } from 'enzyme';
 import enzymeAdapterPlusnew, { shallow } from '@plusnew/enzyme-adapter';
-import plusnew from 'plusnew';
+import plusnew from '@plusnew/core';
 import App from '.';
 import Content from './components/Content';
 import Footer from './components/Footer';

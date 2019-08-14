@@ -1,4 +1,4 @@
-import plusnew, { component, Props } from 'plusnew';
+import plusnew, { component, Props } from '@plusnew/core';
 import { BrowserProvider } from '@plusnew/router';
 
 type props = {

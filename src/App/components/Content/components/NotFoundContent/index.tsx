@@ -1,4 +1,4 @@
-import plusnew, { component } from 'plusnew';
+import plusnew, { component } from '@plusnew/core';
 
 export default component(
   __dirname,
