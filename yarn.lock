@@ -304,10 +304,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
-"@plusnew/core@^0.6.58":
-  version "0.6.58"
-  resolved "https://registry.yarnpkg.com/@plusnew/core/-/core-0.6.58.tgz#121696d3cb03e31223391a191f5385e8eca29bf8"
-  integrity sha512-G3u68AXJLtLzL9qd7lGNtXCTGUT0bjiDVPe8U34xMsV1kO6v2lH0968LXUMh0QuzTAvvD85iQO0AZgNH8gAMzg==
+"@plusnew/core@^0.6.59":
+  version "0.6.59"
+  resolved "https://registry.yarnpkg.com/@plusnew/core/-/core-0.6.59.tgz#dd36fb208116765b796cbf49bf09248caf3663b5"
+  integrity sha512-NHs35JmBn2Ub8WDSaZEpzaaN0t9IvnX6QmtkRPzUwMFqZy+21+MeFXB6L2VM+W16Bc9gCmASpQajFEaud02vyA==
 
 "@plusnew/enzyme-adapter@^0.6.54":
   version "0.6.54"
