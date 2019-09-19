@@ -17,7 +17,7 @@
   "author": "",
   "dependencies": {
     "@plusnew/core": "^0.6.59",
-    "@plusnew/router": "^0.6.61"
+    "@plusnew/router": "^0.6.63"
   },
   "devDependencies": {
     "@plusnew/enzyme-adapter": "^0.6.54",
