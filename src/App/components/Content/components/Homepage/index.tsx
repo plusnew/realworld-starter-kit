@@ -1,11 +1,15 @@
-import { createRoute } from "@plusnew/router";
+import { createRoute, serializer } from "@plusnew/router";
 import plusnew, { component, Async } from "@plusnew/core";
 import Loader from "shared/components/Loader";
 
 export default createRoute(
   "/",
-  {} as const,
-  component(__dirname, () => (
+  {
+    offset: [serializer.number(), serializer.undefined()],
+    limit: [serializer.number(), serializer.undefined()],
+    tag: [serializer.string(), serializer.undefined()],
+  } as const,
+  component(__dirname, (Props) => (
     <Async
       pendingIndicator={<Loader />}
       constructor={() =>
@@ -14,7 +18,11 @@ export default createRoute(
         )
       }
     >
-      {(module) => <module.default />}
+      {(module) => (
+        <Props>
+          {(props) => <module.default parameter={props.parameter} />}
+        </Props>
+      )}
     </Async>
   ))
 );
