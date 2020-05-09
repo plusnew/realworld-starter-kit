@@ -4,14 +4,16 @@ const { TsConfigPathsPlugin } = require("awesome-typescript-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 
+const ASSET_DIRECTORY = "assets/";
+
 module.exports = (env) => ({
   context: path.join(__dirname, "src"),
   entry: ["./index.tsx"],
   mode: env.mode,
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "js/[name].[hash].js",
-    chunkFilename: "js/[name].[hash].bundle.js",
+    filename: `${ASSET_DIRECTORY}js/[name].[hash].js`,
+    chunkFilename: `${ASSET_DIRECTORY}js/[name].[hash].bundle.js`,
     publicPath: "/",
   },
   resolve: {
@@ -19,6 +21,9 @@ module.exports = (env) => ({
     plugins: [new TsConfigPathsPlugin()],
   },
   devtool: "source-map",
+  node: {
+    __dirname: true,
+  },
   module: {
     rules: [
       {
@@ -27,7 +32,7 @@ module.exports = (env) => ({
           {
             loader: "file-loader",
             options: {
-              name: "[path][name].[hash].[ext]",
+              name: `${ASSET_DIRECTORY}[path][name].[hash].[ext]`,
             },
           },
         ],
@@ -68,6 +73,12 @@ module.exports = (env) => ({
           port: 3000,
           clientLogLevel: "info",
           historyApiFallback: true,
+          proxy: {
+            "/api": {
+              target: "https://conduit.productionready.io",
+              changeOrigin: true,
+            },
+          },
         }
       : undefined,
 });
