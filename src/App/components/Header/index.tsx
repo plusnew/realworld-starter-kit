@@ -1,16 +1,20 @@
 import plusnew, { component } from "@plusnew/core";
-
+import homepageRoute from "App/components/Content/components/Homepage";
 export default component(__dirname, () => (
   <nav class="navbar navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <homepageRoute.Link class="navbar-brand" parameter={{ "/": {} }}>
         conduit
-      </a>
+      </homepageRoute.Link>
       <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item">
-          <a class="nav-link active" href="">
+          <homepageRoute.Link
+            class="nav-link"
+            classActive="active"
+            parameter={{ "/": {} }}
+          >
             Home
-          </a>
+          </homepageRoute.Link>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="">
