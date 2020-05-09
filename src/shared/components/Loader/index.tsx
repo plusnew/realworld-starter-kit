@@ -1,7 +1,3 @@
-import plusnew, { component } from '@plusnew/core';
+import plusnew, { component } from "@plusnew/core";
 
-export default component(
-  __dirname,
-  () =>
-    <div>Loading...</div>,
-);
+export default component(__dirname, () => <div>Loading...</div>);

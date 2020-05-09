@@ -1,7 +1,5 @@
-import plusnew, { component } from '@plusnew/core';
+import plusnew, { component } from "@plusnew/core";
 
-export default component(
-  __dirname,
-  () =>
-    <div>This route has invalid parameters</div>,
-);
+export default component(__dirname, () => (
+  <div>This route has invalid parameters</div>
+));

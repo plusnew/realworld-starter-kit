@@ -1,27 +1,20 @@
-import { createRoute } from '@plusnew/router';
-import plusnew, { component, Props, Async } from '@plusnew/core';
-import Loader from 'shared/components/Loader';
-
-type props = {
-  parameter: {},
-  props: {},
-};
-
-const Component =  component(
-  __dirname,
-  (_Props: Props<props>) =>
-    <Async
-      pendingIndicator={<Loader />}
-    >{
-      () =>
-        // tslint:disable-next-line: space-in-parens
-        import(/* webpackChunkName: "site/homepage" */ './components/HomepageContent')
-          .then(module => <module.default />)
-    }</Async>,
-);
+import { createRoute } from "@plusnew/router";
+import plusnew, { component, Async } from "@plusnew/core";
+import Loader from "shared/components/Loader";
 
 export default createRoute(
-  '',
-  {},
-  Component,
+  "/",
+  {} as const,
+  component(__dirname, () => (
+    <Async
+      pendingIndicator={<Loader />}
+      constructor={() =>
+        import(
+          /* webpackChunkName: "site/homepage" */ "./components/HomepageContent"
+        )
+      }
+    >
+      {(module) => <module.default />}
+    </Async>
+  ))
 );
