@@ -3,6 +3,7 @@ import Loader from "shared/components/Loader";
 import { getArticles, getTags } from "shared/api/request";
 import homepageRoute from "../../";
 import type { RouteToParameter } from "@plusnew/router";
+import { repeat } from "shared/util/repeat";
 
 const DEFAULT_LIMIT = 10;
 
@@ -83,43 +84,83 @@ export default component(
                       })
                     }
                   >
-                    {(result) =>
-                      result.articles.map((article) => (
-                        <div key={article.slug} class="article-preview">
-                          <div class="article-meta">
-                            <a href="profile.html">
-                              <img src={article.author.image} />
-                            </a>
-                            <div class="info">
-                              <a href="" class="author">
-                                {article.author.username}
+                    {(result) => (
+                      <>
+                        {result.articles.map((article) => (
+                          <div key={article.slug} class="article-preview">
+                            <div class="article-meta">
+                              <a href="profile.html">
+                                <img src={article.author.image} />
                               </a>
-                              <span class="date">{article.createdAt}</span>
+                              <div class="info">
+                                <a href="" class="author">
+                                  {article.author.username}
+                                </a>
+                                <span class="date">{article.createdAt}</span>
+                              </div>
+                              <button class="btn btn-outline-primary btn-sm pull-xs-right">
+                                <i class="ion-heart"></i>{" "}
+                                {article.favoritesCount}
+                              </button>
                             </div>
-                            <button class="btn btn-outline-primary btn-sm pull-xs-right">
-                              <i class="ion-heart"></i> {article.favoritesCount}
-                            </button>
+                            <a href="" class="preview-link">
+                              <h1>{article.title}</h1>
+                              <p>{article.body}</p>
+                              <span>Read more...</span>
+                              {article.tagList.length > 0 && (
+                                <ul class="tag-list">
+                                  {article.tagList.map((tag) => (
+                                    <li
+                                      key={tag}
+                                      class="tag-default tag-pill tag-outline"
+                                    >
+                                      {tag}
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </a>
                           </div>
-                          <a href="" class="preview-link">
-                            <h1>{article.title}</h1>
-                            <p>{article.body}</p>
-                            <span>Read more...</span>
-                            {article.tagList.length > 0 && (
-                              <ul class="tag-list">
-                                {article.tagList.map((tag) => (
-                                  <li
-                                    key={tag}
-                                    class="tag-default tag-pill tag-outline"
+                        ))}
+                        <ul class="pagination">
+                          {repeat(
+                            Math.ceil(
+                              result.articlesCount /
+                                (props.parameter["/"].limit || DEFAULT_LIMIT)
+                            ),
+                            (index) => {
+                              const offset =
+                                index *
+                                  (props.parameter["/"].limit ||
+                                    DEFAULT_LIMIT) || undefined;
+                              return (
+                                <li
+                                  key={index}
+                                  class={`page-item ${
+                                    props.parameter["/"].offset === offset
+                                      ? "active"
+                                      : ""
+                                  }`}
+                                >
+                                  <homepageRoute.Link
+                                    parameter={{
+                                      "/": {
+                                        tag: props.parameter["/"].tag,
+                                        limit: props.parameter["/"].limit,
+                                        offset: offset,
+                                      },
+                                    }}
+                                    class="page-link"
                                   >
-                                    {tag}
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-                          </a>
-                        </div>
-                      ))
-                    }
+                                    {index + 1}
+                                  </homepageRoute.Link>
+                                </li>
+                              );
+                            }
+                          )}
+                        </ul>
+                      </>
+                    )}
                   </Async>
                 </div>
               )}
