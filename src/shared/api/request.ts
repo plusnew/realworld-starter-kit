@@ -43,7 +43,7 @@ export function postUsers(body: {
 }): Promise<UserResponse> {
   return request("/users", "POST", body);
 }
-export function getUsers(): Promise<UserResponse> {
+export function getUser(): Promise<UserResponse> {
   return request("/users", "GET");
 }
 export function putUsers(body: {

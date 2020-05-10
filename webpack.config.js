@@ -2,10 +2,10 @@ const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { TsConfigPathsPlugin } = require("awesome-typescript-loader");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-const webpack = require("webpack");
 const BabelMultiTargetPlugin = require("webpack-babel-multi-target-plugin")
   .BabelMultiTargetPlugin;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 
 const getConfig = (opt) => ({
   context: path.join(__dirname, "src"),
@@ -50,6 +50,10 @@ const getConfig = (opt) => ({
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "public", "index.html"),
       inject: "head",
+    }),
+
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: "defer",
     }),
 
     new BabelMultiTargetPlugin({
