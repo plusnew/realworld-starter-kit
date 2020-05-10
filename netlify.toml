@@ -5,8 +5,8 @@
   force = true
 
 [[redirects]]
-  from = "/assets/*"
-  to = "/assets/:splat"
+  from = "/static/*"
+  to = "/static/:splat"
   status = 200
 
 [[redirects]]

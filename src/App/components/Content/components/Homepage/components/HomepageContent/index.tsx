@@ -2,7 +2,7 @@ import plusnew, { component, Async, Props } from "@plusnew/core";
 import Loader from "shared/components/Loader";
 import { getArticles, getTags } from "shared/api/request";
 import homepageRoute from "../../";
-import { RouteToParameter } from "@plusnew/router";
+import type { RouteToParameter } from "@plusnew/router";
 
 const DEFAULT_LIMIT = 10;
 
@@ -70,7 +70,11 @@ export default component(
 
                   <Async
                     key={`${props.parameter["/"].tag}-${props.parameter["/"].offset}-${props.parameter["/"].limit}`}
-                    pendingIndicator={<Loader />}
+                    pendingIndicator={
+                      <div class="article-preview">
+                        <Loader />
+                      </div>
+                    }
                     constructor={() =>
                       getArticles({
                         tag: props.parameter["/"].tag,
@@ -93,13 +97,25 @@ export default component(
                               <span class="date">{article.createdAt}</span>
                             </div>
                             <button class="btn btn-outline-primary btn-sm pull-xs-right">
-                              <i class="ion-heart"></i> {article.favorited}
+                              <i class="ion-heart"></i> {article.favoritesCount}
                             </button>
                           </div>
                           <a href="" class="preview-link">
                             <h1>{article.title}</h1>
                             <p>{article.body}</p>
                             <span>Read more...</span>
+                            {article.tagList.length > 0 && (
+                              <ul class="tag-list">
+                                {article.tagList.map((tag) => (
+                                  <li
+                                    key={tag}
+                                    class="tag-default tag-pill tag-outline"
+                                  >
+                                    {tag}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </a>
                         </div>
                       ))
