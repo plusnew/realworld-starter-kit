@@ -9,6 +9,8 @@ configure({ adapter: new enzymeAdapterPlusnew() });
 
 describe("<Providers />", () => {
   it("should contain <Header /", () => {
+    globalThis.fetch = jest.fn(() => Promise.reject());
+
     const wrapper = mount(
       <Providers>
         <div />
@@ -20,5 +22,7 @@ describe("<Providers />", () => {
     expect(wrapper.find(BrowserProvider).find("div").exists()).toBe(true);
 
     wrapper.unmount();
+
+    delete globalThis.fetch;
   });
 });
