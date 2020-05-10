@@ -49,7 +49,7 @@ const getConfig = (opt) => ({
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "public", "index.html"),
-      inject: "head",
+      inject: "body",
     }),
 
     new ScriptExtHtmlWebpackPlugin({
