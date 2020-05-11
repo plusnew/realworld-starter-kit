@@ -9,7 +9,7 @@ configure({ adapter: new enzymeAdapterPlusnew() });
 
 describe("<Providers />", () => {
   it("should contain <Header /", () => {
-    globalThis.fetch = jest.fn(() => Promise.reject());
+    window.fetch = jest.fn(() => Promise.reject());
 
     const wrapper = mount(
       <Providers>
@@ -23,6 +23,6 @@ describe("<Providers />", () => {
 
     wrapper.unmount();
 
-    delete globalThis.fetch;
+    delete window.fetch;
   });
 });
