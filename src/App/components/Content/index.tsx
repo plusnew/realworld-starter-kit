@@ -1,12 +1,14 @@
 import plusnew, { component } from "@plusnew/core";
-import Homepage from "./components/Homepage";
-import { NotFound, Invalid } from "@plusnew/router";
-import NotFoundContent from "./components/NotFoundContent";
+import { Invalid, NotFound } from "@plusnew/router";
+import articleeRoute from "./components/Article";
+import homepageRoute from "./components/Homepage";
 import InvalidContent from "./components/InvalidContent";
+import NotFoundContent from "./components/NotFoundContent";
 
 export default component(__dirname, () => (
   <>
-    <Homepage.Component />
+    <homepageRoute.Component />
+    <articleeRoute.Component />
 
     <NotFound>
       <NotFoundContent />

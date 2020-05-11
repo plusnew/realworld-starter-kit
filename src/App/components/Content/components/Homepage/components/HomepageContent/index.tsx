@@ -1,9 +1,10 @@
-import plusnew, { component, Async, Props } from "@plusnew/core";
-import Loader from "shared/components/Loader";
-import { getArticles, getTags } from "shared/api/request";
-import homepageRoute from "../../";
+import plusnew, { Async, component, Props } from "@plusnew/core";
 import type { RouteToParameter } from "@plusnew/router";
+import articleRoute from "App/components/Content/components/Article";
+import { getArticles, getTags } from "shared/api/request";
+import Loader from "shared/components/Loader";
 import { repeat } from "shared/util/repeat";
+import homepageRoute from "../../";
 
 const DEFAULT_LIMIT = 10;
 
@@ -103,7 +104,15 @@ export default component(
                                 {article.favoritesCount}
                               </button>
                             </div>
-                            <a href="" class="preview-link">
+                            <articleRoute.Link
+                              class="preview-link"
+                              parameter={{
+                                "/": props.parameter["/"],
+                                article: {
+                                  slug: article.slug,
+                                },
+                              }}
+                            >
                               <h1>{article.title}</h1>
                               <p>{article.body}</p>
                               <span>Read more...</span>
@@ -119,7 +128,7 @@ export default component(
                                   ))}
                                 </ul>
                               )}
-                            </a>
+                            </articleRoute.Link>
                           </div>
                         ))}
                         <ul class="pagination">
