@@ -25,7 +25,7 @@
     "@plusnew/enzyme-adapter": "^1.0.1",
     "@plusnew/simulate-dom-events": "^0.1.5",
     "@types/enzyme": "^3.10.5",
-    "@types/jest": "^25.2.1",
+    "@types/jest": "^25.2.2",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
     "awesome-typescript-loader": "^5.2.1",
