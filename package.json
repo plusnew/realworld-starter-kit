@@ -13,7 +13,7 @@
   ],
   "author": "Carlo Jeske",
   "dependencies": {
-    "@plusnew/core": "^1.2.0",
+    "@plusnew/core": "^1.3.0",
     "@plusnew/driver-dom": "^1.0.2",
     "@plusnew/router": "^1.2.0"
   },
