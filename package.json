@@ -13,9 +13,9 @@
   ],
   "author": "Carlo Jeske",
   "dependencies": {
-    "@plusnew/core": "^1.2.0",
+    "@plusnew/core": "^1.3.1",
     "@plusnew/driver-dom": "^1.0.2",
-    "@plusnew/router": "^1.2.0"
+    "@plusnew/router": "^1.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -26,8 +26,8 @@
     "@plusnew/simulate-dom-events": "^0.1.5",
     "@types/enzyme": "^3.10.5",
     "@types/jest": "^26.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "@typescript-eslint/parser": "^2.34.0",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
     "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^3.0.0",
     "enzyme": "^3.11.0",
