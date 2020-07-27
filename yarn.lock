@@ -8005,10 +8005,10 @@ webidl-conversions@^6.0.0:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-6.1.0.tgz#9111b4d7ea80acd40f5270d666621afa78b69514"
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
 
-webpack-babel-multi-target-plugin@^2.5.0-next.2:
-  version "2.5.0-next.2"
-  resolved "https://registry.yarnpkg.com/webpack-babel-multi-target-plugin/-/webpack-babel-multi-target-plugin-2.5.0-next.2.tgz#f783f96a4a66872cbac29c3fb4af1c6c65dd6b9f"
-  integrity sha512-So09jhaWDz70uJu4JRDr3jdhyRbbhCmS+D08GEFpVo1UAr2qGMSoy+d3qknykWlhoWKPzJuFnqCBnflIHenkYQ==
+webpack-babel-multi-target-plugin@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/webpack-babel-multi-target-plugin/-/webpack-babel-multi-target-plugin-2.5.0.tgz#427c9355b8bf1ade6355ff3eb492341da1972b5b"
+  integrity sha512-8eCrnsPySLocgkPgpv4xNRrNgQm5cb9rZWGLYcYlAoHrH8LuoPxaO/NMwUjv7Wgnxu0stRSwfwKJSvd65vs0lA==
   dependencies:
     "@babel/cli" "^7.2.3"
     "@babel/core" "^7.2.2"
