@@ -24,7 +24,7 @@
     "@babel/plugin-transform-typescript": "^7.12.1",
     "@plusnew/enzyme-adapter": "^1.1.0",
     "@plusnew/simulate-dom-events": "^0.1.5",
-    "@types/enzyme": "^3.10.6",
+    "@types/enzyme": "^3.10.7",
     "@types/jest": "^26.0.14",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^3.10.1",
