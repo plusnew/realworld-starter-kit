@@ -20,7 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/plugin-transform-react-jsx": "^7.12.1",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
     "@babel/plugin-transform-typescript": "^7.12.1",
     "@plusnew/enzyme-adapter": "^1.1.0",
     "@plusnew/simulate-dom-events": "^0.1.5",
