@@ -18,7 +18,7 @@
     "@plusnew/router": "^1.4.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
+    "@babel/core": "^7.12.17",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/plugin-transform-react-jsx": "^7.12.17",
     "@babel/plugin-transform-typescript": "^7.12.17",
