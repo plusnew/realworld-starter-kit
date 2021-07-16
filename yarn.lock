@@ -1204,10 +1204,10 @@
   resolved "https://registry.yarnpkg.com/@plusnew/enzyme-adapter/-/enzyme-adapter-1.1.0.tgz#f7af67762b18a878f9e7b4ae859159ca92e0148a"
   integrity sha512-bEv8woIzYW2kWTFIpDSwFPS07CXRGwh68O+facZY4jU+5TmucL6Jrs/hcVBbuAGq3E0BZ6PvB5N4NlHiiWd2uA==
 
-"@plusnew/router@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@plusnew/router/-/router-1.4.2.tgz#76bd88b8f34e95e2e36ad6110e13ac864a83f689"
-  integrity sha512-7TvNvCUfO2Ottrwr06XkNmb+tnhkhw9F0myqogezcnsbR74BGT4Ogqlu+IDnfG4tFg54lrk3GKGnBVhU41KULw==
+"@plusnew/router@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@plusnew/router/-/router-1.4.3.tgz#bb35d0602d4e1fc073eadf3bd470b4a00907c886"
+  integrity sha512-y94DKXFChI+3slTGyOMY0no328hqXOkvP0NxRhaqewJ5cmfx9WmCYktMnIbPhCv1QYl8MZdmrHqTaSHeCrsOqw==
 
 "@plusnew/simulate-dom-events@^0.1.5":
   version "0.1.5"
