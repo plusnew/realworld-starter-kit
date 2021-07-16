@@ -1189,10 +1189,10 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@plusnew/core@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@plusnew/core/-/core-1.4.1.tgz#e10c093cb3aeddb8d3ff2c36ccc2cb9eb882c1bd"
-  integrity sha512-IAObhqQ1cRZzuvupLwr+ZFze7FPo/wC5mCjhGODURhKp+ia+fqvBgQlnuI/jNgqCVL4wZ0/ZynnJlsbZYta/LA==
+"@plusnew/core@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@plusnew/core/-/core-1.6.2.tgz#7cbe5dc5d9c1a933a7bf99c4028b420f80838687"
+  integrity sha512-IEAiztvE8FZ8Aymm1YKl1eaJjq2BaKVeV/rP/Dcj3OBrmrBASj/5bjGByuriVD5/Y/HtxzfAa/N3fEWpyjK+dg==
 
 "@plusnew/driver-dom@^1.1.2":
   version "1.1.2"
