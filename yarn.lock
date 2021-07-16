@@ -1194,10 +1194,10 @@
   resolved "https://registry.yarnpkg.com/@plusnew/core/-/core-1.4.1.tgz#e10c093cb3aeddb8d3ff2c36ccc2cb9eb882c1bd"
   integrity sha512-IAObhqQ1cRZzuvupLwr+ZFze7FPo/wC5mCjhGODURhKp+ia+fqvBgQlnuI/jNgqCVL4wZ0/ZynnJlsbZYta/LA==
 
-"@plusnew/driver-dom@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@plusnew/driver-dom/-/driver-dom-1.1.2.tgz#ef933e2e9d82f7afc353b32f2f362eb510edeb35"
-  integrity sha512-nhd5Rq9wMXR600DVPy29aYrTxONNnbVu0wWYb6CGL1814+ecVzhCyArRuaABIxNNBDIayWutLndglUvjO/hmIA==
+"@plusnew/driver-dom@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@plusnew/driver-dom/-/driver-dom-1.4.0.tgz#e3905ce553817ef2bb15b851119389798297a8bb"
+  integrity sha512-bMGrLTl5cm2/deqZKLiMqSymZrZBtKliWLK1gwwhymVwF6LiWUH72TEvHgDWMJWhjx3FLj6VQsnvSiLKiw9EqQ==
 
 "@plusnew/enzyme-adapter@^1.1.0":
   version "1.1.0"
