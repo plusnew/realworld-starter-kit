@@ -15,7 +15,7 @@
   "dependencies": {
     "@plusnew/core": "^1.4.1",
     "@plusnew/driver-dom": "^1.1.2",
-    "@plusnew/router": "^1.4.2"
+    "@plusnew/router": "^1.4.3"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
