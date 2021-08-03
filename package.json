@@ -14,7 +14,7 @@
   "author": "Carlo Jeske",
   "dependencies": {
     "@plusnew/core": "^1.4.1",
-    "@plusnew/driver-dom": "^1.1.2",
+    "@plusnew/driver-dom": "^1.4.0",
     "@plusnew/router": "^1.4.3"
   },
   "devDependencies": {
