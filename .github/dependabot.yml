@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: fork-ts-checker-webpack-plugin
+    versions:
+    - 6.1.0
+    - 6.1.1
+    - 6.2.0
+    - 6.2.1
+    - 6.2.4
+  - dependency-name: webpack-cli
+    versions:
+    - 4.4.0
+    - 4.5.0
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.12.13
+  - dependency-name: "@plusnew/driver-dom"
+    versions:
+    - 1.3.2
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+  - dependency-name: ts-jest
+    versions:
+    - 26.4.4
